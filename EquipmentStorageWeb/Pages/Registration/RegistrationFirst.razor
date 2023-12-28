@@ -1,0 +1,121 @@
+﻿@page "/reg1"
+@using Blazored.SessionStorage
+@inject ISessionStorageService SessionStorage
+@inject NavigationManager _navigationManager
+
+
+
+
+<div class="screen">
+    <div class="div">
+        <header class="header-simple">
+            <div class="group">
+                <!--<a title="" href="/aboutus" target="_self">
+                    <div class="text-wrapper-5">О нас</div>
+                </a>-->
+                <a title="" href="/condition" target="_self">
+                    <div class="text-wrapper-8">Условия аренды</div>
+                </a>
+                <a title="" href="/contact" target="_self">
+                    <div class="text-wrapper-9">Контакты</div>
+                </a>
+            </div>
+            <div class="view-3">
+                <div class="text-wrapper-10">Equipment Storage</div>
+                <img class="logo" src="./images/Registration/logo.png" />
+            </div>
+        </header>
+        <div class="view">
+            <img class="line" src="./images/Registration/Line1.png" />
+            <img class="img" src="./images/Registration/Line1.png" />
+
+            <div class="text-wrapper">
+                <input type="text" placeholder="Имя*" @bind="name">
+
+            </div>
+            <div class="text-wrapper-2">
+                <input type="text" placeholder="Фамилия*" @bind="surname">
+
+            </div>
+            <img class="line-2" src="./images/Registration/Line1.png" />
+            <img class="line-3" src="./images/Registration/Line1.png" />
+            <div class="text-wrapper-3">
+                <input type="text" placeholder="Отчество" @bind="patronymic">
+
+            </div>
+            <div class="text-wrapper-4">
+                <input type="date" placeholder="" @bind="birthday">
+
+            </div>
+        </div>
+        <div class="view-2">
+            <div class="text-wrapper-5">Уже зарегистрированы?</div>
+            <a title="" href="/login" target="_self">
+                <div class="text-wrapper-6" @onclick="Back">Войти</div>
+            </a>
+        </div>
+        <div class="text-wrapper-7">Регистрация</div>
+        <div class="add-photo">
+            <div class="image-wrapper">
+                <a title="" target="_self">
+                    <img class="image" src="./images/Registration/Загрузка фото.png" />
+                </a>
+            </div>
+        </div>
+        <a @onclick="SetValues" title="Далее" target="_self">
+            <div class="view-4">
+                <div class="text-wrapper-11" >Далее</div>
+                <img class="arrow" src="./images/Registration/Arrow3.svg" />
+            </div>
+        </a>
+        <div class="group-wrapper">
+            <a @onclick="Back" title="" target="_self">
+                <div class="group-2">
+                    <div class="text-wrapper-12" >Назад</div>
+                    <img class="arrow-2" src="./images/Registration/Arrow1.svg" />
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+@code
+{
+    string name;
+    string surname;
+    string patronymic;
+    DateTime birthday = DateTime.Today.AddYears(-14);
+
+    async Task Back()
+    {
+        await SessionStorage.RemoveItemsAsync(await SessionStorage.KeysAsync());
+        _navigationManager.NavigateTo("/");
+    }
+
+    async Task SetValues()
+    {
+        await SessionStorage.SetItemAsync<string>("name", name);
+        await SessionStorage.SetItemAsync<string>("surname", surname);
+        await SessionStorage.SetItemAsync<string>("patronymic", patronymic);
+        await SessionStorage.SetItemAsync<DateTime>("birthday", birthday);
+        _navigationManager.NavigateTo("/reg2");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        name = await SessionStorage.GetItemAsync<string>("name");
+        surname = await SessionStorage.GetItemAsync<string>("surname");
+        patronymic = await SessionStorage.GetItemAsync<string>("patronymic");
+        DateTime b = await SessionStorage.GetItemAsync<DateTime>("birthday");
+        if (b != null)
+
+            birthday = b;
+        else
+            birthday = DateTime.Today.AddYears(-14);
+    }
+
+
+}

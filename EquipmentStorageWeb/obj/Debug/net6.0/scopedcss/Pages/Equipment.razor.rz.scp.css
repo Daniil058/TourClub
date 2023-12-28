@@ -1,0 +1,439 @@
+.screen[b-e6rju3hup8] {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    font-family: "Open Sans", Helvetica;
+    font-weight: 400;
+    color: #274251;
+}
+
+    .screen .name[b-e6rju3hup8] {
+        position: absolute;
+        top: 185px;
+        left: 746px;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .screen .span[b-e6rju3hup8] {
+        font-weight: 600;
+    }
+
+    .screen .description[b-e6rju3hup8] {
+        width: 605px;
+        top: 286px;
+        left: 748px;
+        color: #274251;
+        font-size: 20px;
+        position: absolute;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .params[b-e6rju3hup8] {
+        position: absolute;
+        top: 353px;
+        left: 746px;
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .screen .navbar[b-e6rju3hup8] {
+        position: absolute;
+        width: 1277px;
+        height: 50px;
+        top: 60px;
+        left: 115px;
+    }
+
+    .screen .text-wrapper-5[b-e6rju3hup8] {
+        position: absolute;
+        top: 8px;
+        left: 1055px;
+        font-weight: 600;
+        color: #274251;
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-6[b-e6rju3hup8] {
+        left: 90px;
+        color: #274251;
+        position: absolute;
+        top: 8px;
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-7[b-e6rju3hup8] {
+        left: 195px;
+        color: #64c4be;
+        position: absolute;
+        top: 8px;
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-8[b-e6rju3hup8] {
+        left: 327px;
+        color: #274251;
+        position: absolute;
+        top: 8px;
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-9[b-e6rju3hup8] {
+        left: 560px;
+        color: #274251;
+        position: absolute;
+        top: 8px;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-10[b-e6rju3hup8] {
+        left: 721px;
+        color: #274251;
+        position: absolute;
+        top: 8px;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .image[b-e6rju3hup8] {
+        top: 0;
+        left: 985px;
+        object-fit: cover;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+
+    .screen .profile[b-e6rju3hup8] {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        background-image: url(https://c.animaapp.com/aTiOuBpB/img/profile-7@2x.png);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .screen .footer[b-e6rju3hup8] {
+        position: absolute;
+        width: 1512px;
+        height: 97px;
+        top: 769px;
+        left: 0;
+        background-color: transparent;
+        background: linear-gradient(180deg, rgb(66, 168, 176) 0%, rgb(103, 198, 191) 100%);
+    }
+
+    .screen .text-wrapper-11[b-e6rju3hup8] {
+        position: absolute;
+        width: 339px;
+        top: 31px;
+        left: 117px;
+        font-family: "Open Sans", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .view[b-e6rju3hup8] {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 23px;
+        left: 1132px;
+        background-color: #ffffff;
+        border-radius: 25px;
+    }
+
+    .screen .t[b-e6rju3hup8] {
+        position: absolute;
+        width: 35px;
+        height: 33px;
+        top: 7px;
+        left: 7px;
+        background: linear-gradient(180deg, rgb(66, 168, 176) 0%, rgb(103, 198, 191) 100%);
+        -webkit-background-clip: text !important;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        font-family: "Open Sans", Helvetica;
+        font-weight: 600;
+        font-style: italic;
+        color: transparent;
+        font-size: 13px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: 13px;
+    }
+
+    .screen .img[b-e6rju3hup8] {
+        top: 23px;
+        left: 1202px;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+
+    .screen .image-2[b-e6rju3hup8] {
+        top: 23px;
+        left: 1272px;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+
+    .screen .image-3[b-e6rju3hup8] {
+        top: 23px;
+        left: 1342px;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+
+    .screen .equip[b-e6rju3hup8] {
+        position: absolute;
+        width: 538px;
+        height: 503px;
+        top: 186px;
+        left: 120px;
+        background-image: url(https://c.animaapp.com/aTiOuBpB/img/rectangle-33.svg);
+    }
+
+    .screen .equip-image[b-e6rju3hup8] {
+        position: absolute;
+        width: auto;
+        height: auto;
+        max-width: 346px;
+        max-height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .screen .orient-category-type[b-e6rju3hup8] {
+        display: flex;
+        position: absolute;
+        top: 133px;
+        left: 121px;
+        color: #5dbebb !important;
+        font-size: 24px;
+    }
+
+    .screen .el[b-e6rju3hup8] {
+        margin-right: 25px;
+    }
+
+    .screen .booking-button[b-e6rju3hup8] {
+        position: absolute;
+        width: 260px;
+        height: 60px;
+        top: 629px;
+        left: 746px;
+        border-radius: 40px;
+        background: linear-gradient(180deg, rgb(66, 168, 176) 0%, rgb(103, 198, 191) 100%);
+    }
+
+    .screen .button-text[b-e6rju3hup8] {
+        top: 13px;
+        left: 35px;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 24px;
+        position: absolute;
+        line-height: normal;
+    }
+
+    .screen .return-button[b-e6rju3hup8] {
+        position: absolute;
+        width: 115px;
+        height: 33px;
+        top: 709px;
+        left: 121px;
+    }
+
+    .screen .return-text[b-e6rju3hup8] {
+        top: 2px;
+        left: 45px;
+        color: #274251;
+        font-size: 24px;
+        position: absolute;
+        line-height: normal;
+    }
+
+    .screen .return-arrow[b-e6rju3hup8] {
+        position: absolute;
+        width: 32px;
+        height: 15px;
+        top: 13px;
+    }
+
+
+    .screen .background-blur[b-e6rju3hup8] {
+        position: absolute;
+        width: 1512px;
+        height: 866px;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(7px) brightness(100%);
+        -webkit-backdrop-filter: blur(7px) brightness(100%);
+        background: linear-gradient(180deg, rgba(66, 168, 176, 0.2) 0%, rgba(103, 198, 191, 0.2) 100%);
+    }
+
+    .screen .booking-window[b-e6rju3hup8] {
+        position: relative;
+        width: 538px;
+        height: 479px;
+        top: 193px;
+        left: 487px;
+        background-image: url(https://c.animaapp.com/ix58Sg1Y/img/rectangle-40.svg);
+        background-size: 100% 100%;
+    }
+
+
+
+    .screen .booking-text[b-e6rju3hup8] {
+        top: 32px;
+        left: 154px;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        white-space: nowrap;
+        position: absolute;
+    }
+
+    .screen .booking-params[b-e6rju3hup8] {
+        position: absolute;
+        top: 158px;
+        left: 39px;
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .screen .attention-text[b-e6rju3hup8] {
+        top: 93px;
+        left: 114px;
+        font-size: 20px;
+        line-height: normal;
+        position: absolute;
+    }
+
+    .screen .rule[b-e6rju3hup8] {
+        font-weight: 600;
+        text-decoration:underline;
+        font-style: italic;
+        color: #274251;
+    }
+
+    .screen .div-3[b-e6rju3hup8] {
+        width: 209px;
+        top: 306px;
+        left: 39px;
+        font-weight: 400;
+        color: #274251;
+        font-size: 20px;
+        line-height: normal;
+        position: absolute;
+        font-family: "Open Sans", Helvetica;
+        letter-spacing: 0;
+    }
+
+    .screen .booking-date[b-e6rju3hup8] {
+        top: 346px;
+        font-size: 20px;
+        line-height: normal;
+        position: absolute;
+    }
+
+    .screen .line[b-e6rju3hup8] {
+        left: 89px;
+        position: absolute;
+        width: 150px;
+        height: 1px;
+        top: 370px;
+        object-fit: cover;
+    }
+
+input[b-e6rju3hup8] {
+    width: 168px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.btn[b-e6rju3hup8] {
+    border: 0px;
+    background-color: white;
+    color: black;
+    padding: 0px 0px;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.screen .btn-border[b-e6rju3hup8] {
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    top: 397px;
+    left: 104px;
+    border-radius: 40px;
+    border: 5px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(rgb(66, 168, 176), rgb(103, 198, 191)) border-box;
+}
+
+.screen .cancel-text[b-e6rju3hup8] {
+    top: 1px;
+    left: 40px;
+    color: #5dbebb;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    line-height: normal;
+    position: absolute;
+}
+
+.screen .ok[b-e6rju3hup8] {
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    top: 397px;
+    left: 304px;
+    border-radius: 40px;
+    background: linear-gradient(180deg, rgb(66, 168, 176) 0%, rgb(103, 198, 191) 100%);
+}
+
+.screen .ok-text[b-e6rju3hup8] {
+    width: 38px;
+    top: 6px;
+    left: 46px;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    line-height: normal;
+    position: absolute;
+}
+
+.screen .attention-icon[b-e6rju3hup8] {
+    width: 60px;
+    height: 60px;
+    top: 90px;
+    background-image: url(./images/Catalog/One/notion.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    left: 39px;
+}

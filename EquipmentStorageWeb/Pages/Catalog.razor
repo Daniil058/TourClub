@@ -1,0 +1,297 @@
+﻿@using EquipmentStorageWeb.Services
+@using EquipmentStorageWeb.Data.Models
+@inject IJSRuntime jsRuntime
+@inject NavigationManager _navigationManager
+
+@page "/catalog"
+
+
+
+<div class="screen">
+    <div class="div">
+        <div class="text-wrapper">Каталог</div>
+        <div class="view">
+
+            <div class="div-wrapper">
+                <select @onchange="FilterOrientation" id="0" class="text-wrapper-3">
+                    <option>Направление</option>
+                    @if (orientations != null)
+                    {
+                        @foreach (string orient in orientations)
+                        {
+                            <option value="@orient">@orient</option>
+                        }
+                    }
+                </select>
+            </div>
+
+
+            <div class="overlap-group-wrapper">
+                <div class="div-wrapper">
+                    <select @onchange="FilterCategory" id="1" class="text-wrapper-3">
+                        <option>Категория</option>
+                        @if (categories != null)
+                        {
+                            @foreach (string category in categories)
+                            {
+                                <option value="@category">@category</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="view-2">
+                <div class="div-wrapper overlap-2">
+                    <select @onchange="FilterType" id="2" class="text-wrapper-3" style="width:275px!important;">
+                        <option>Тип</option>
+                        @if (categoriesDTO != null)
+                        {
+                            @foreach (CategoryEquipmentDTO category in categoriesDTO)
+                            {
+                                <option value="@category.Id">@category.Type</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="view-3">
+                <div class="div-wrapper overlap-group">
+                    <select id="3" @onchange="FilterCondition" class="text-wrapper-3">
+                        <option>Состояние</option>
+                        @if (conditions != null)
+                        {
+                            @foreach (ConditionDTO cond in conditions)
+                            {
+                                @if (cond != null)
+                                {
+                                    <option value="@cond.Id.ToString()">@cond.Name.ToString()</option>
+                                }
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="view-4">
+                <div class="div-wrapper overlap-group">
+                    <select @onchange="FilterAvailability" id="4" class="text-wrapper-3">
+                        <option>Наличие</option>
+                        <option>В наличии</option>
+                        <option>Нет в наличии</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+
+        <button @onclick="SearchName" class="search-box">
+            <div class="icon-search"></div>
+        </button>
+
+        <input type="text" class="search-box-mini" name="search_name" @bind-value="searchText">
+
+        <div class="view-5 row row-cols-md-5">
+
+            @if (equipments != null)
+            {
+                @foreach (EquipmentDTO equipment in equipments)
+                    {
+                    <div class="col">
+
+                        <div @onclick="()=>toItem(equipment)" class="view-8 card">
+                            <div class="image-div">
+                                <img class="image" src="@((equipment.PhotoPath!=null)?equipment.PhotoPath:"/images/Catalog/Equipments/default.png")" />
+                            </div>
+                            <div class="text-wrapper-7">Состояние: @equipment.Condition</div>
+                            <p class="p">
+                                <span>@equipment.Type</span><br>
+                                <span class="text-wrapper-9">@equipment.Name</span>
+                            </p>
+
+                            <p class="div-2">
+                                <span>@((equipment.Cost_rent!=null)?equipment.Cost_rent.ToString():"?") </span>
+                                <span>₽/день</span>
+                            </p>
+                        </div>
+                    </div>
+                }}
+        </div>
+        <header class="navbar">
+            <a class="text-wrapper-12">Equipment Storage</a>
+
+            <a href="/aboutus" class="text-wrapper-13">О нас</a>
+
+            <a href="/catalog" class="text-wrapper-14">Каталог</a>
+
+            <a href="/condition" class="text-wrapper-15">Условия аренды</a>
+
+            <a href="/payment" class="text-wrapper-16">Об оплате</a>
+
+            <a href="/contact" class="text-wrapper-17">Контакты</a>
+
+            <img class="img" src="images/Catalog/bag.png" />
+            <a href="/profile"><div class="profile"></div></a>
+        </header>
+        <div class="view-20">
+            <button class="view-21" onclick="page_1()">
+                <img src="images/Catalog/page1.png">
+
+            </button>
+            <button class="view-22" onclick="page_2()">
+                <img src="images/Catalog/page2.png">
+
+            </button>
+            <button class="view-23" onclick="page_3()">
+                <img src="images/Catalog/page3.png">
+
+            </button>
+        </div>
+        <footer class="footer">
+            <div class="text-wrapper-20">© 2023, EquipmentStorage.ru</div>
+            <div class="t-wrapper"><br>Tур<br />Клуб</div>
+            <img class="image-2" src="images/Catalog/vk.png" />
+            <img class="image-3" src="images/Catalog/telegram.png" />
+            <img class="image-4" src="images/Catalog/youtube.png" />
+        </footer>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+@code{
+
+    string searchText;
+
+    List<EquipmentDTO> equipments = new List<EquipmentDTO>();
+    List<ConditionDTO> conditions = new List<ConditionDTO>();
+    List<CategoryEquipmentDTO> categoriesDTO = new List<CategoryEquipmentDTO>();
+    List<string> categories = new List<string>();
+    List<string> types = new List<string>();
+    List<string> orientations = new List<string>();
+    [Inject]
+    private IEquipmentProvider equipmentProvider { get; set; }
+    [Inject]
+    private IConditionProvider conditionProvider { get; set; }
+    [Inject]
+    private ICategoryEquipmentProvider categoryEquipmentProvider { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        equipments = await equipmentProvider.GetEquipments();
+        conditions = await conditionProvider.GetConditions();
+        categoriesDTO = await categoryEquipmentProvider.GetCategoriesEquipment();
+        foreach (var val in categoriesDTO)
+        {
+            if (!categories.Contains(val.Category))
+                categories.Add(val.Category);
+
+            if (!orientations.Contains(val.Orientation))
+                orientations.Add(val.Orientation);
+        }
+    }
+
+    public void toItem(EquipmentDTO equipment)
+    {
+        _navigationManager.NavigateTo($"/equipment/{equipment.Id.ToString()}");
+    }
+    
+    protected async void SearchName()
+    {
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 0);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 1);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 2);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 3);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 4);
+
+        searchText = searchText.Trim();
+        if (searchText.Equals(""))
+            equipments = await equipmentProvider.GetEquipments();
+        else
+            equipments = await equipmentProvider.GetEquipmentsByName(searchText);
+        StateHasChanged();
+    }
+
+
+    protected async void FilterCondition(ChangeEventArgs args)
+    {
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 0);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 1);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 2);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 4);
+        if (args.Value.ToString().Equals("Состояние"))
+            equipments = await equipmentProvider.GetEquipments();
+        else
+            equipments = await equipmentProvider.GetEquipmentsWithConditionId(int.Parse(args?.Value?.ToString()));
+        StateHasChanged();
+    }
+
+    protected async void FilterAvailability(ChangeEventArgs args)
+    {
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 0);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 1);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 3);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 2);
+
+        //equipments = await equipmentProvider.GetEquipmentsWithConditionId(int.Parse(conditionId));
+    }
+
+    protected async void FilterType(ChangeEventArgs args)
+    {
+
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 0);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 1);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 3);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 4);
+
+        if (args.Value.ToString().Equals("Тип"))
+            equipments = await equipmentProvider.GetEquipments();
+        else
+            equipments = await equipmentProvider.GetEquipmentsWithCategoryId(int.Parse(args?.Value?.ToString()));
+        StateHasChanged();
+
+        //equipments = await equipmentProvider.GetEquipmentsWithConditionId(int.Parse(conditionId));
+    }
+
+    protected async void FilterOrientation(ChangeEventArgs args)
+    {
+
+
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 1);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 2);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 3);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 4);
+
+        if (args.Value.ToString().Equals("Направление"))
+            equipments = await equipmentProvider.GetEquipments();
+        else
+            equipments = await equipmentProvider.GetEquipmentsWithOrientationName(args?.Value?.ToString());
+        StateHasChanged();
+
+        //equipments = await equipmentProvider.GetEquipmentsWithConditionId(int.Parse(conditionId));
+    }
+
+    protected async void FilterCategory(ChangeEventArgs args)
+    {
+
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 0);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 2);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 3);
+        await jsRuntime.InvokeVoidAsync("resetSelectElement", 4);
+
+        if (args.Value.ToString().Equals("Категория"))
+            equipments = await equipmentProvider.GetEquipments();
+        else
+            equipments = await equipmentProvider.GetEquipmentsWithCategoryName(args?.Value?.ToString());
+        StateHasChanged();
+        //equipments = await equipmentProvider.GetEquipmentsWithConditionId(int.Parse(conditionId));
+    }
+}

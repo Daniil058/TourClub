@@ -1,0 +1,198 @@
+﻿@using EquipmentStorageWeb.Data.Models
+@using EquipmentStorageWeb.Services
+@using Blazored.SessionStorage
+@inject NavigationManager _navigationManager
+@inject ISessionStorageService SessionStorage
+
+@page "/equipment/{equipmentId}"
+
+<div class="screen">
+    <header class="navbar">
+        <div class="text-wrapper-5">Equipment Storage</div>
+        <a href="/aboutus">
+            <div class="text-wrapper-6">О нас</div>
+        </a>
+        <a href="/catalog">
+            <div class="text-wrapper-7">Каталог</div>
+        </a>
+        <a href="/condition">
+            <div class="text-wrapper-8">Условия аренды</div>
+        </a>
+        <a href="/payment">
+            <div class="text-wrapper-9">Об оплате</div>
+        </a>
+        <a href="/contact">
+            <div class="text-wrapper-10">Контакты</div>
+        </a>
+        <img class="image" src="./images/Catalog/One/image 37.png" />
+        <a href="/profile">
+            <div class="profile"></div>
+        </a>
+    </header>
+
+
+    <p class="name">
+        <span>@currentEquipment.CategoryEquipment.Type</span>
+        <br><span style="font-weight:600;">@currentEquipment.Name</span>
+    </p>
+    @if (currentEquipment.Description != null)
+    {
+        <p class="description">@currentEquipment.Description</p>
+    }
+    <p class="params">
+        <span style="font-weight:600;">Производитель: </span>
+        <span>@((currentEquipment.Producer!=null)?currentEquipment.Producer:"Не указан")</span>
+        @if (currentEquipment.Property1 != null && !currentEquipment.Property1.Trim().Equals(""))
+        {
+            <br><span>@currentEquipment.Property1</span>
+        }
+        @if (currentEquipment.Property2 != null && !currentEquipment.Property2.Trim().Equals(""))
+        {
+            <br><span>@currentEquipment.Property2</span>
+        }
+
+
+        <br><span style="font-weight:600;">Вес: </span>
+        <span>@((currentEquipment.Weight!=null)?currentEquipment.Weight+" грамм":"Не указан")</span>
+        <br><span style="font-weight:600;">Цвет: </span>
+        <span>@((currentEquipment.Color!=null)?currentEquipment.Color:"Не указан")</span>
+        <br><span style="font-weight:600;">Стоимость: </span>
+        <span>@((currentEquipment.Cost!=null)?currentEquipment.Cost+ " ₽" : "Не указана")</span>
+        <br><span style="font-weight:600;">Сумма залога: </span>
+        <span>@((currentEquipment.Cost!=null)?string.Format("{0:0.##} ₽", currentEquipment.Cost * 0.8):"Не указана")</span>
+        <br><span style="font-weight:600;">Стоимость аренды: </span>
+        <span>@((currentEquipment.Cost_rent!=null)?currentEquipment.Cost_rent:"?") ₽/день</span>
+        <br><span style="font-weight:600;">Состояние: </span>
+        <span>@((currentEquipment.Condition!=null)?currentEquipment.Condition.Name:"Не указано")</span>
+    </p>
+
+    <footer class="footer">
+        <div class="text-wrapper-11">© 2023, EquipmentStorage.ru</div>
+        <div class="view">
+            <div class="t">Tур<br />Клуб</div>
+        </div>
+        <img class="img" src="./images/Catalog/One/4.png" />
+        <img class="image-2" src="./images/Catalog/One/3.png" />
+        <img class="image-3" src="./images/Catalog/One/2.png" />
+    </footer>
+
+    <div class="equip">
+        <img class="equip-image" src="@((currentEquipment.PhotoPath!=null)?currentEquipment.PhotoPath:"/images/Catalog/Equipments/default.png")" />
+    </div>
+
+    <div class="orient-category-type">
+        <p class="el">@currentEquipment.CategoryEquipment.Orientation</p>
+        <img class="el" src="./images/Catalog/One/Rectangle 39.png" />
+        <p class="el">@currentEquipment.CategoryEquipment.Category</p>
+        <img class="el" src="./images/Catalog/One/Rectangle 39.png" />
+        <p class="el">@currentEquipment.CategoryEquipment.Type</p>
+    </div>
+
+    <a @onclick="ToRent">
+        <div class="booking-button">
+            <div class="button-text">Забронировать</div>
+        </div>
+    </a>
+
+    <a href="/catalog">
+        <div class="return-button">
+            <div class="return-text">Назад</div>
+            <img class="return-arrow" src="./images/Catalog/One/arrow 2.png" />
+        </div>
+    </a>
+
+
+
+    <div class="background-blur" style="visibility:@(visible);">
+        <div class="booking-window">
+
+            <p class="booking-text">Бронирование</p>
+            <div class="attention-icon"></div>
+            <p class="attention-text">
+                <span>Перед бронированием ознакомьтесь с </span>
+                <a href="https://docs.google.com/document/d/12DLJmQNJ4-U2QdernmCNc3E4nMPE9Uf63WVJBO8jus8/edit" class="rule" target="_blank">правилами пользования снаряжением </a>
+            </p>
+
+            <p class="booking-params">
+                <span style="font-weight:600;">Наименование: </span>
+                <span>@currentEquipment.Name</span>
+                <br><span style="font-weight:600;">Инв. номер: </span>
+                <span>@currentEquipment.InventoryNumber</span>
+                <br><span style="font-weight:600;">Сумма залога: </span>
+                <span>@((currentEquipment.Cost!=null)?string.Format("{0:0.##} ₽", currentEquipment.Cost * 0.8):"Не указана")</span>
+                <br><span style="font-weight:600;">Стоимость аренды: </span>
+                <span>@((currentEquipment.Cost_rent!=null)?currentEquipment.Cost_rent:"?") ₽/день</span>
+                <br><span style="font-weight:600;">Состояние: </span>
+                <span>@((currentEquipment.Condition!=null)?currentEquipment.Condition.Name:"Не указано")</span>
+                <br><span style="font-weight:600;position: absolute; top:150px;">Срок бронирования:</span>
+            </p>
+            <p class="booking-date" style="left:69px;">с</p>
+            <p class="booking-date" style="left:284px;">по</p>
+            <img class="line" src="./images/Catalog/One/Line1.png" />
+            <img class="line" style="left:319px;" src="./images/Catalog/One/Line1.png" />
+            <input @bind="startDate" class="booking-date" style="left:105px;" type="date" />
+            <input @bind="finishDate" class="booking-date" style="left:335px;" type="date" />
+
+            <a @onclick="Close">
+                <div class="btn-border">
+                    <div class="cancel-text">Отмена</div>
+                </div>
+            </a>
+            <a @onclick="Rent">
+                <div class="ok">
+                    <div class="ok-text">Ок</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+@code {
+
+    string visible = "collapse";
+    DateOnly startDate = DateOnly.FromDateTime(DateTime.Today);
+    DateOnly finishDate = DateOnly.FromDateTime(DateTime.Today.AddDays(5));
+
+
+    [Parameter]
+    public string equipmentId { get; set; }
+    public EquipmentMoreDTO currentEquipment { get; set; }
+    [Inject]
+    private IEquipmentProvider equipmentProvider { get; set; }
+
+    [Inject]
+    private IBookingProvider bookingProvider { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        currentEquipment = await equipmentProvider.GetEquipment(Int32.Parse(equipmentId));
+        base.OnInitialized();
+    }
+
+    protected void ToRent()
+    {
+        visible = "";
+    }
+
+    protected void Close()
+    {
+        visible = "collapse";
+    }
+    protected async void Rent()
+    {
+        int id = await SessionStorage.GetItemAsync<int>("id");
+        BookingDTO booking = new BookingDTO()
+        {
+            EquipmentId = int.Parse(equipmentId),
+            StartBookingDate = startDate.ToDateTime(TimeOnly.MinValue),
+            FinishBookingDate = finishDate.ToDateTime(TimeOnly.MinValue),
+            RequestDate = DateTime.Today,
+            UserId = id,
+        };
+        bool? flag = await bookingProvider.AddBooking(booking);
+        Close();
+    }
+
+}
+
+

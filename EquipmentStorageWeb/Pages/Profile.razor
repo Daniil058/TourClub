@@ -1,0 +1,219 @@
+﻿@using EquipmentStorageWeb.Data.Models
+@using EquipmentStorageWeb.Services
+@using Blazored.SessionStorage
+@inject NavigationManager NavigationManager
+@inject ISessionStorageService SessionStorage
+
+@page "/profile"
+
+<div class="screen">
+    <div class="div">
+        <div class="text-wrapper">Профиль</div>
+        <footer class="footer">
+            <div class="text-wrapper-2">© 2023, EquipmentStorage.ru</div>
+            <div class="t-wrapper"><br>Tур<br />Клуб</div>
+            <img class="image-2" src="images/Profile/vk.png" />
+            <img class="image-3" src="images/Profile/telegram.png" />
+            <img class="image-4" src="images/Profile/youtube.png" />
+        </footer>
+        <header class="navbar">
+            <a class="text-wrapper-3">Equipment Storage</a>
+
+            <a href="/aboutus" class="text-wrapper-4">О нас</a>
+
+            <a href="/catalog" class="text-wrapper-5">Каталог</a>
+
+            <a href="/condition" class="text-wrapper-6">Условия аренды</a>
+
+            <a href="/payment" class="text-wrapper-7">Об оплате</a>
+
+            <a href="/contact" class="text-wrapper-8">Контакты</a>
+
+            <img class="img" src="images/Profile/bag.png" />
+            <div class="profile"></div>
+        </header>
+        <div class="add-photo">
+            <button class="image-wrapper" onclick="upphoto()">
+
+                <img class="image-1" src="images/Profile/photo.png" />
+            </button>
+        </div>
+        <div class="view-2">
+            <div class="text-wrapper-9">Имя:</div>
+            <div class="text-wrapper-10">Фамилия:</div>
+            <div class="text-wrapper-11">Отчество:</div>
+            <div class="text-wrapper-12">Дата рождения:</div>
+            <div class="text-wrapper-13">E-mail:</div>
+            <div class="text-wrapper-14">Телефон:</div>
+            <div class="text-wrapper-15">Интересы:</div>
+        </div>
+        <div class="view-3">
+            <div class="text-wrapper-16">@name</div>
+            <div class="text-wrapper-17">@surname</div>
+            <div class="text-wrapper-18">@patronymic</div>
+            <div class="text-wrapper-19">@birthday</div>
+            <div class="text-wrapper-20">@mail</div>
+            <div class="text-wrapper-21">@phone</div>
+            <div class="text-wrapper-22">
+                @if (interests is not null)
+                {
+                    @foreach (var interest in interests)
+                    {
+                        @if (interest != null)
+                        {
+
+                            <text>@interest.Name, </text>
+                        }
+
+                    }
+                }
+                else
+                {
+                    <p>Не указаны</p>
+                }
+
+            </div>
+
+        </div>
+        <div class="overlap-group-wrapper">
+            <button class="overlap-group" @onclick="Exit">
+                Выйти
+
+            </button>
+        </div>
+        <div class="edit_btn">
+            <button class="overlap" onclick="edit()">
+                Изменить данные
+
+            </button>
+        </div>
+        <div class="div-wrapper">
+            <button class="overlap-2" @onclick="ToRent">
+                Посмотреть текущие бронирования
+
+            </button>
+        </div>
+    </div>
+
+
+    <div style="visibility:@state;" class="background-blur">
+        <div class="booking-form">
+            <p class="booking-text">Бронирования</p>
+            <a class="cross" @onclick="Back">
+                <img src="images/Profile/cross.png">
+            </a>
+            <div class="table-header">
+                <p class="table-header-text" style="left: 84px;">Инв. номер</p>
+                <p class="table-header-text" style="left: 216px;">Наименование</p>
+                <p class="table-header-text" style="left: 652px;">Начало использования</p>
+                <p class="table-header-text" style="left: 878px;">Конец использования</p>
+            </div>
+            <div class="content">
+                @if(bookings is not null)
+                @foreach (BookingDTOGet booking in bookings)
+                {
+                    <div class="table-element1">
+                        <p class="table-text" style="left: 84px;">@booking.EquipmentNumber</p>
+                        <p class="table-text" style="left: 216px;">@(booking.EquipmentType + " " + booking.EquipmentName)</p>
+                        <p class="table-text" style="left: 652px;">@booking.StartBookingDate</p>
+                        <p class="table-text" style="left: 878px;">@booking.FinishBookingDate</p>
+                        <button class="btn">
+                            <p class="btn-text">Продлить</p>
+                        </button>
+                    </div>
+                }
+
+
+
+                <div class="table-element2">
+                    <p class="table-text" style="left: 84px;">1010</p>
+                    <p class="table-text" style="left: 216px;">
+                        Палатка Tram Mountain 4v2
+                    </p>
+                    <p class="table-text" style="left: 652px;">28.12.2023</p>
+                    <p class="table-text" style="left: 878px;">30.12.2023</p>
+                    <button class="btn">
+                        <p class="btn-text">Продлить</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+@code
+{
+    public int id;
+    public string name;
+    public string surname;
+    public string patronymic;
+    public string birthday;
+    public string mail;
+    public string phone;
+    public string role;
+
+    public string state = "collapse";
+
+    List<Interest> interests;
+    List<BookingDTOGet>? bookings;
+
+    [Inject]
+    private IContactInformationProvider ContactInformationProvider { get; set; }
+
+    [Inject]
+    private IBookingProvider BookingProvider { get; set; }
+
+    protected async void Exit()
+    {
+        await SessionStorage.RemoveItemsAsync(await SessionStorage.KeysAsync());
+        NavigationManager.NavigateTo("/");
+
+    }
+
+    protected void ToRent()
+    {
+        state = "";
+    }
+
+    protected void Back()
+    {
+        state = "collapse";
+    }
+    protected override async Task OnInitializedAsync()
+    {
+
+        id = await SessionStorage.GetItemAsync<int>("id");
+        try
+        {
+            bookings = await BookingProvider.GetBooking(id);
+        }
+        catch { }
+
+        name = await SessionStorage.GetItemAsync<string>("name");
+        surname = await SessionStorage.GetItemAsync<string>("surname");
+        patronymic = await SessionStorage.GetItemAsync<string>("patronymic");
+        birthday = await SessionStorage.GetItemAsync<string>("birthday");
+        interests = await SessionStorage.GetItemAsync<List<Interest>>("interests");
+
+        var result = await ContactInformationProvider.GetContactInformation(id);
+        role = result.Role;
+        mail = result.Email;
+        phone = result.Phone;
+
+        if (patronymic == "")
+            patronymic = "Не указано";
+        if (birthday == "")
+            birthday = "Не указано";
+        else
+            birthday = DateTime.Parse(birthday).ToShortDateString();
+        if (mail == "")
+            mail = "Не указано";
+        if (phone == "")
+            phone = "Не указано";
+
+    }
+    }

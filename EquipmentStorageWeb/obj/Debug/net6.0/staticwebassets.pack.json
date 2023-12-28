@@ -1,0 +1,377 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/bin/Debug/net6.0/wwwroot/_framework/blazor.webassembly.js",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/obj/Debug/net6.0/build-gz/zMSbK3lJ.gz",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/obj/Debug/net6.0/scopedcss/bundle/EquipmentStorageWeb.styles.css",
+      "PackagePath": "staticwebassets/EquipmentStorageWeb.styles.css"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/open-iconic/FONT-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/open-iconic/ICON-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/open-iconic/README.md",
+      "PackagePath": "staticwebassets/css/open-iconic/README.md"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.eot"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.otf"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.svg"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.ttf"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.woff"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/icon-192.png",
+      "PackagePath": "staticwebassets/icon-192.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/.DS_Store",
+      "PackagePath": "staticwebassets/images/.DS_Store"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/AboutUs/2.png",
+      "PackagePath": "staticwebassets/images/AboutUs/2.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/AboutUs/3.png",
+      "PackagePath": "staticwebassets/images/AboutUs/3.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/AboutUs/4.png",
+      "PackagePath": "staticwebassets/images/AboutUs/4.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/AboutUs/5.png",
+      "PackagePath": "staticwebassets/images/AboutUs/5.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/AboutUs/Rectangle 26.png",
+      "PackagePath": "staticwebassets/images/AboutUs/Rectangle 26.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/AboutUs/image 37.png",
+      "PackagePath": "staticwebassets/images/AboutUs/image 37.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/.DS_Store",
+      "PackagePath": "staticwebassets/images/Catalog/.DS_Store"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/Equipments/.DS_Store",
+      "PackagePath": "staticwebassets/images/Catalog/Equipments/.DS_Store"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/Equipments/3.png",
+      "PackagePath": "staticwebassets/images/Catalog/Equipments/3.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/Equipments/4.png",
+      "PackagePath": "staticwebassets/images/Catalog/Equipments/4.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/Equipments/6.png",
+      "PackagePath": "staticwebassets/images/Catalog/Equipments/6.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/Equipments/7.png",
+      "PackagePath": "staticwebassets/images/Catalog/Equipments/7.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/Equipments/8.png",
+      "PackagePath": "staticwebassets/images/Catalog/Equipments/8.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/Equipments/default.png",
+      "PackagePath": "staticwebassets/images/Catalog/Equipments/default.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/2.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/2.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/3.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/3.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/4.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/4.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/5.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/5.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/Arrow 2.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/Arrow 2.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/Line1.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/Line1.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/Rectangle 26.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/Rectangle 26.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/Rectangle 39.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/Rectangle 39.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/image 37.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/image 37.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/One/notion.png",
+      "PackagePath": "staticwebassets/images/Catalog/One/notion.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/bag.png",
+      "PackagePath": "staticwebassets/images/Catalog/bag.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/blue.png",
+      "PackagePath": "staticwebassets/images/Catalog/blue.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/frame.png",
+      "PackagePath": "staticwebassets/images/Catalog/frame.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/frame_one.png",
+      "PackagePath": "staticwebassets/images/Catalog/frame_one.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/orange.png",
+      "PackagePath": "staticwebassets/images/Catalog/orange.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/page1.png",
+      "PackagePath": "staticwebassets/images/Catalog/page1.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/page2.png",
+      "PackagePath": "staticwebassets/images/Catalog/page2.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/page3.png",
+      "PackagePath": "staticwebassets/images/Catalog/page3.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/profile.png",
+      "PackagePath": "staticwebassets/images/Catalog/profile.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/search.png",
+      "PackagePath": "staticwebassets/images/Catalog/search.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/telegram.png",
+      "PackagePath": "staticwebassets/images/Catalog/telegram.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/vk.png",
+      "PackagePath": "staticwebassets/images/Catalog/vk.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/yellow.png",
+      "PackagePath": "staticwebassets/images/Catalog/yellow.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Catalog/youtube.png",
+      "PackagePath": "staticwebassets/images/Catalog/youtube.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/bag.png",
+      "PackagePath": "staticwebassets/images/Index/bag.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/photo.png",
+      "PackagePath": "staticwebassets/images/Index/photo.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/profile.png",
+      "PackagePath": "staticwebassets/images/Index/profile.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/telegram.png",
+      "PackagePath": "staticwebassets/images/Index/telegram.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/vk.png",
+      "PackagePath": "staticwebassets/images/Index/vk.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/youtube.png",
+      "PackagePath": "staticwebassets/images/Index/youtube.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/Картинка.png",
+      "PackagePath": "staticwebassets/images/Index/Картинка.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/бинокль.png",
+      "PackagePath": "staticwebassets/images/Index/бинокль.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/компас.png",
+      "PackagePath": "staticwebassets/images/Index/компас.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/палатка.png",
+      "PackagePath": "staticwebassets/images/Index/палатка.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Index/рюкзак.png",
+      "PackagePath": "staticwebassets/images/Index/рюкзак.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Profile/bag.png",
+      "PackagePath": "staticwebassets/images/Profile/bag.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Profile/cross.png",
+      "PackagePath": "staticwebassets/images/Profile/cross.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Profile/photo.png",
+      "PackagePath": "staticwebassets/images/Profile/photo.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Profile/profile.png",
+      "PackagePath": "staticwebassets/images/Profile/profile.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Profile/telegram.png",
+      "PackagePath": "staticwebassets/images/Profile/telegram.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Profile/vk.png",
+      "PackagePath": "staticwebassets/images/Profile/vk.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Profile/youtube.png",
+      "PackagePath": "staticwebassets/images/Profile/youtube.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/Arrow1.svg",
+      "PackagePath": "staticwebassets/images/Registration/Arrow1.svg"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/Arrow3.svg",
+      "PackagePath": "staticwebassets/images/Registration/Arrow3.svg"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/Line1.png",
+      "PackagePath": "staticwebassets/images/Registration/Line1.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/Subtract.png",
+      "PackagePath": "staticwebassets/images/Registration/Subtract.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/logo.png",
+      "PackagePath": "staticwebassets/images/Registration/logo.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/Загрузка фото.png",
+      "PackagePath": "staticwebassets/images/Registration/Загрузка фото.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/вело.png",
+      "PackagePath": "staticwebassets/images/Registration/вело.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/водный.png",
+      "PackagePath": "staticwebassets/images/Registration/водный.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/лыжный.png",
+      "PackagePath": "staticwebassets/images/Registration/лыжный.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/ориентирование.png",
+      "PackagePath": "staticwebassets/images/Registration/ориентирование.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/пешеходный.png",
+      "PackagePath": "staticwebassets/images/Registration/пешеходный.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/слалолазание.png",
+      "PackagePath": "staticwebassets/images/Registration/слалолазание.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/images/Registration/турмногоборье.png",
+      "PackagePath": "staticwebassets/images/Registration/турмногоборье.png"
+    },
+    {
+      "Id": "/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.EquipmentStorageWeb.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.EquipmentStorageWeb.props",
+      "PackagePath": "build\\EquipmentStorageWeb.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.EquipmentStorageWeb.props",
+      "PackagePath": "buildMultiTargeting\\EquipmentStorageWeb.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.EquipmentStorageWeb.props",
+      "PackagePath": "buildTransitive\\EquipmentStorageWeb.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

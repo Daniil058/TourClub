@@ -1,0 +1,368 @@
+﻿.screen {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+    .screen .div {
+        background-color: #ffffff;
+        width: 1512px;
+        height: 866px;
+        position: relative;
+    }
+
+.focus {
+    border-style: solid;
+    background-color: rgba(100, 196, 190,.2);
+    
+    
+}
+    .screen .text-wrapper {
+        top: 156px;
+        left: 120px;
+        font-weight: 400;
+        color: #274251;
+        position: absolute;
+        font-family: "Open Sans", Helvetica;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .view {
+        position: absolute;
+        width: 1040px;
+        height: 454px;
+        top: 226px;
+        left: 243px;
+    }
+
+    .screen .text-wrapper-2 {
+        top: 175px;
+        left: 0;
+        font-weight: 400;
+        color: #274251;
+        position: absolute;
+        font-family: "Open Sans", Helvetica;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-3 {
+        top: 421px;
+        left: 138px;
+        font-weight: 400;
+        color: #274251;
+        position: absolute;
+        font-family: "Open Sans", Helvetica;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-4 {
+        top: 421px;
+        left: 410px;
+        font-weight: 400;
+        color: #274251;
+        position: absolute;
+        font-family: "Open Sans", Helvetica;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-5 {
+        top: 420px;
+        left: 713px;
+        font-weight: 400;
+        color: #274251;
+        position: absolute;
+        font-family: "Open Sans", Helvetica;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-6 {
+        top: 175px;
+        left: 318px;
+        font-weight: 400;
+        color: #274251;
+        position: absolute;
+        font-family: "Open Sans", Helvetica;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-7 {
+        top: 175px;
+        left: 574px;
+        font-weight: 400;
+        color: #274251;
+        position: absolute;
+        font-family: "Open Sans", Helvetica;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .text-wrapper-8 {
+        top: 175px;
+        left: 907px;
+        font-weight: 400;
+        color: #274251;
+        position: absolute;
+        font-family: "Open Sans", Helvetica;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .screen .view-2 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 0;
+        left: 4px;
+        background-image: url(./images/Registration/пешеходный.png);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .screen .view-3 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 0;
+        left: 292px;
+        background-image: url(./images/Registration/лыжный.png);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .screen .view-4 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 0;
+        left: 584px;
+        background-image: url(./images/Registration/вело.png);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .screen .view-5 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 0;
+        left: 876px;
+        background-image: url(./images/Registration/водный.png);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+a:hover {
+    cursor: pointer;
+}
+
+.screen .view-6 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 246px;
+    left: 146px;
+    background-image: url(./images/Registration/слалолазание.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.screen .subtract-wrapper {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 245px;
+    left: 438px;
+    background-image: url(./images/Registration/ориентирование.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.screen .subtract {
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    top: 54px;
+    left: 11px;
+    object-fit: cover;
+}
+
+.screen .view-7 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 242px;
+    left: 734px;
+    background-image: url(./images/Registration/турмногоборье.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.screen .header-simple {
+    position: absolute;
+    width: 1272px;
+    height: 50px;
+    top: 60px;
+    left: 120px;
+}
+
+.screen .group {
+    position: absolute;
+    width: 456px;
+    height: 33px;
+    top: 9px;
+    left: 0;
+}
+
+.screen .text-wrapper-9 {
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    color: #274251;
+    position: absolute;
+    font-family: "Open Sans", Helvetica;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.screen .text-wrapper-10 {
+    top: 0;
+    left: 105px;
+    font-weight: 400;
+    color: #274251;
+    position: absolute;
+    font-family: "Open Sans", Helvetica;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.screen .text-wrapper-11 {
+    top: 0;
+    left: 338px;
+    font-weight: 400;
+    color: #274251;
+    position: absolute;
+    font-family: "Open Sans", Helvetica;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.screen .view-8 {
+    position: absolute;
+    width: 294px;
+    height: 50px;
+    top: 0;
+    left: 980px;
+}
+
+.screen .text-wrapper-12 {
+    position: absolute;
+    top: 9px;
+    left: 70px;
+    font-family: "Open Sans", Helvetica;
+    font-weight: 600;
+    color: #274251;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.screen .logo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.screen .view-9 {
+    position: absolute;
+    width: 238px;
+    height: 60px;
+    top: 717px;
+    left: 766px;
+    border-radius: 40px;
+    background: linear-gradient(180deg, rgb(66, 168, 176) 0%, rgb(103, 198, 191) 100%);
+}
+
+.screen .text-wrapper-13 {
+    width: 74px;
+    top: 12px;
+    left: 64px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    font-family: "Open Sans", Helvetica;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.screen .arrow {
+    position: absolute;
+    width: 32px;
+    height: 15px;
+    top: 25px;
+    left: 151px;
+}
+
+.screen .group-wrapper {
+    position: absolute;
+    width: 238px;
+    height: 60px;
+    top: 717px;
+    left: 508px;
+    border-radius: 40px;
+    border: 5px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient( rgb(66, 168, 176), rgb(103, 198, 191)) border-box;
+}
+
+.screen .group-2 {
+    position: relative;
+    width: 121px;
+    height: 33px;
+    top: 8px;
+    left: 54px;
+}
+
+.screen .text-wrapper-14 {
+    width: 75px;
+    top: 0;
+    left: 44px;
+    font-weight: 600;
+    color: #5dbebb;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    font-family: "Open Sans", Helvetica;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.screen .arrow2 {
+    position: absolute;
+    width: 33px;
+    height: 22px;
+    top: 8px;
+    left: -2px;
+}

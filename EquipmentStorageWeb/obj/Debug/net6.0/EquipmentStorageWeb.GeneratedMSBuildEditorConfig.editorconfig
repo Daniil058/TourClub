@@ -1,0 +1,73 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = EquipmentStorageWeb
+build_property.RootNamespace = EquipmentStorageWeb
+build_property.ProjectDir = /Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Components/EquipmentList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9FcXVpcG1lbnRMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-w0stanopkv
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Components/RolesList/RolesList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb2xlc0xpc3QvUm9sZXNMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ly3dnqxx2y
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Pages/AboutUs.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWJvdXRVcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-m7lsbdtxg2
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Pages/Authorization.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aG9yaXphdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ii2rzbqv09
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Pages/Catalog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0YWxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-bxw97n39e0
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Pages/Equipment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXF1aXBtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-e6rju3hup8
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-pkdj49w6wq
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-6pera5d7w6
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Pages/Registration/RegistrationFirst.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0cmF0aW9uL1JlZ2lzdHJhdGlvbkZpcnN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-nun2i3fi5v
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Pages/Registration/RegistrationSecond.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0cmF0aW9uL1JlZ2lzdHJhdGlvblNlY29uZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-t0rq788udu
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Pages/Registration/RegistrationThird.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0cmF0aW9uL1JlZ2lzdHJhdGlvblRoaXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-9f1aw75li1
+
+[/Users/daniil/Documents/Учеба/4 курс 1 семестр/Методологии разработки/EquipmentStorage/EquipmentStorageWeb/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rr032ohxnl

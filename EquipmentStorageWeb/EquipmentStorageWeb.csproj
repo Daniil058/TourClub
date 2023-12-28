@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>anycpu</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'BlazorApp1' ">
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.25" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.25" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Blazored.LocalStorage" Version="4.4.0" />
+    <PackageReference Include="Blazored.SessionStorage" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Data\" />
+    <None Remove="Data\Models\" />
+    <None Remove="Services\" />
+    <None Remove="Components\" />
+    <None Remove="Components\RolesList\" />
+    <None Remove="Shared\" />
+    <None Remove="Pages\Registration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Data\Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Components\" />
+    <Folder Include="Components\RolesList\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\images\Index\" />
+    <Folder Include="Shared\" />
+    <Folder Include="wwwroot\images\AboutUs\" />
+    <Folder Include="Pages\Registration\" />
+    <Folder Include="wwwroot\images\Registration\" />
+    <Folder Include="wwwroot\images\Catalog\" />
+    <Folder Include="wwwroot\images\Profile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Components\RolesList\RolesList.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+    <None Update="Shared\Header.razor.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\" />
+    <Content Remove="wwwroot\images\Index\" />
+    <Content Remove="wwwroot\images\AboutUs\" />
+    <Content Remove="wwwroot\images\Registration\" />
+    <Content Remove="wwwroot\images\Catalog\" />
+    <Content Remove="wwwroot\images\Profile\" />
+    <Content Remove="wwwroot\images\AboutUs\profile.png" />
+  </ItemGroup>
+</Project>

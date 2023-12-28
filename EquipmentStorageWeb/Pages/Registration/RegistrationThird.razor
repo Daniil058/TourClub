@@ -1,0 +1,168 @@
+﻿@page "/reg3"
+@using Blazored.SessionStorage
+@using EquipmentStorageWeb.Data.Models
+@using EquipmentStorageWeb.Services
+@inject NavigationManager _navigationManager
+@inject ISessionStorageService SessionStorage
+
+<div class="screen">
+    <div class="div">
+        <header class="header-simple">
+            <div class="group-4">
+                <!--<a title="" href="/aboutus" target="_self">
+                    <div class="text-wrapper-10">О нас</div>
+                </a>-->
+                <a title="" href="/condition" target="_self">
+                    <div class="text-wrapper-11">Условия аренды</div>
+                </a>
+                <a title="" href="/contact" target="_self">
+                    <div class="text-wrapper-12">Контакты</div>
+                </a>
+            </div>
+            <div class="view-2">
+                <div class="text-wrapper-13">Equipment Storage</div>
+                <img class="logo" src="./images/Registration/logo.png" />
+            </div>
+        </header>
+
+
+
+        <div class="view">
+            <div class="group">
+                <img class="line" src="./images/Registration/Line1.png" />
+                <img class="img" src="./images/Registration/Line1.png" />
+                <div class="text-wrapper">
+                    <input type="text" placeholder="Логин*" @bind="login">
+
+                </div>
+                <div class="text-wrapper-2"><input @bind="password" type="password" placeholder="Пароль*"></div>
+                <img class="line-2" src="./images/Registration/Line1.png" />
+                <div class="text-wrapper-3"><input @bind="password2" type="password" placeholder="Повторите пароль*"></div>
+            </div>
+            <div class="group-2">
+                <img class="line" src="./images/Registration/Line1.png" />
+                <div class="text-wrapper-4"><input type="email" placeholder="E-mail" @bind="email"></div>
+                <img class="img" src="./images/Registration/Line1.png" />
+                <div class="text-wrapper-5"><input type="tel" placeholder="Телефон" @bind="phone"></div>
+            </div>
+            <div class="text-wrapper-6">Данные авторизации:</div>
+            <div class="text-wrapper-7">Контактные данные:</div>
+        </div>
+
+
+
+        <div class="group-wrapper">
+            <a @onclick="PreviousPage" title="Назад" target="_self">
+                <div class="group-3">
+                    <div class="text-wrapper-8">Назад</div>
+                    <img class="arrow" src="./images/Registration/Arrow1.svg" />
+                </div>
+            </a>
+        </div>
+        <a @onclick="SendDataToDB" target="_self">
+            <div class="div-wrapper">
+                <div class="text-wrapper-9">Готово</div>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+@code
+{
+    string? login;
+    string? email;
+    string? phone;
+    string? password;
+    string? password2;
+
+    [Inject]
+    private IUserDataRegProvider userDataRegProvider { get; set; }
+
+
+    async Task PreviousPage()
+    {
+        if (login != null)
+            await SessionStorage.SetItemAsync<string>("login", login);
+        if (email != null)
+            await SessionStorage.SetItemAsync<string>("email", email);
+        if (phone != null)
+            await SessionStorage.SetItemAsync<string>("phone", phone);
+        _navigationManager.NavigateTo("/reg2");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        login = await SessionStorage.GetItemAsync<string>("login");
+        email = await SessionStorage.GetItemAsync<string>("email");
+        phone = await SessionStorage.GetItemAsync<string>("phone");
+        StateHasChanged();
+    }
+
+    protected async Task SendDataToDB()
+    {
+        List<int> interest = new List<int>();
+        if (await SessionStorage.GetItemAsync<bool>("view2"))
+            interest.Add(1);
+        if (await SessionStorage.GetItemAsync<bool>("view3"))
+            interest.Add(2);
+        if (await SessionStorage.GetItemAsync<bool>("view4"))
+            interest.Add(3);
+        if (await SessionStorage.GetItemAsync<bool>("view5"))
+            interest.Add(4);
+        if (await SessionStorage.GetItemAsync<bool>("view6"))
+            interest.Add(5);
+        if (await SessionStorage.GetItemAsync<bool>("view7"))
+            interest.Add(7);
+        if (await SessionStorage.GetItemAsync<bool>("view8"))
+            interest.Add(6);
+        string name = await SessionStorage.GetItemAsync<string>("name");
+        string surname = await SessionStorage.GetItemAsync<string>("surname");
+        string? patronymic = await SessionStorage.GetItemAsync<string>("patronymic");
+        DateTime? birthday = (await SessionStorage.GetItemAsync<DateTime>("birthday"));
+
+        if (password2 is null || password2.Length == 0 || login is null || login.Length == 0 ||
+                password is null || password.Length == 0)
+            //|| password is null || password.Length == 0 || name.Length == 0 || surname.Length == 0 ||
+            //(phone is not null && (phone.Trim().Length == 11 || phone.Trim().Length == 0)) ||
+            //(email is not null && (!email.Contains("@") || email.Trim().Length == 0)))
+            return;
+        if (password.Equals(password2))
+        {
+            UserAuthDataReg userAuthDataReg = new UserAuthDataReg
+            {
+                Id = 1,
+                Email = email,
+                Login = login,
+                Password = password,
+                Phone = phone
+            };
+
+            if (userAuthDataReg is null)
+                return;
+            int? nid = await userDataRegProvider.AddAuthData(userAuthDataReg);
+
+            if (!nid.HasValue || nid.Value < 0)
+                return;
+
+
+            UserDescrDataReg userDescrDataReg = new UserDescrDataReg
+            {
+                Id = nid.Value,
+                Birthday = birthday,
+                Name = name,
+                Interests = new List<int>(),
+                Patronymic = patronymic,
+                Surname = surname
+            };
+
+
+
+            userDescrDataReg.Interests.AddRange(interest);
+            bool? flag = await userDataRegProvider.AddUserData(userDescrDataReg);
+            _navigationManager.NavigateTo("/login");
+        }
+
+    }
+
+}

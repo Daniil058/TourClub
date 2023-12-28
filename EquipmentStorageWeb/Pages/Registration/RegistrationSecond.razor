@@ -1,0 +1,188 @@
+﻿@page "/reg2"
+@using Blazored.SessionStorage
+@inject ISessionStorageService SessionStorage
+@inject NavigationManager _navigationManager
+
+
+<div class="screen">
+    <div class="div">
+        <header class="header-simple">
+            <div class="group">
+                <!--<a title="" href="/aboutus" target="_self">
+                    <div class="text-wrapper-9">О нас</div>
+                </a>-->
+                <a title="" href="/condition" target="_self">
+                    <div class="text-wrapper-10">Условия аренды</div>
+                </a>
+                <a title="" href="/contact" target="_self">
+                    <div class="text-wrapper-11">Контакты</div>
+                </a>
+            </div>
+            <div class="view-8">
+                <div class="text-wrapper-12">Equipment Storage</div>
+                <img class="logo" src="./images/Registration/logo.png" />
+            </div>
+        </header>
+
+
+        <div class="text-wrapper">Выбери интересующие направления:</div>
+        <div class="view">
+
+            <div class="text-wrapper-2">Пешеходное</div>
+            <div class="text-wrapper-3">Скалолазание</div>
+            <div class="text-wrapper-4">Ориентирование</div>
+            <div class="text-wrapper-5">Турмногоборье</div>
+            <div class="text-wrapper-6">Лыжное</div>
+            <div class="text-wrapper-7">Велосипедное</div>
+            <div class="text-wrapper-8">Водное</div>
+            <a title="" target="_self">
+                <div class="@class2 view-2" @onclick="View2"></div>
+            </a>
+            <a title="" target="_self">
+                <div class="@class3 view-3" @onclick="View3"></div>
+            </a>
+            <a title="" target="_self">
+                <div class="@class4 view-4" @onclick="View4"></div>
+            </a>
+            <a title="" target="_self">
+                <div class="@class5 view-5" @onclick="View5"></div>
+            </a>
+            <a title="" target="_self">
+                <div class="@class6 view-6" @onclick="View6"></div>
+            </a>
+            <a title="" target="_self">
+                <div class="@class8 subtract-wrapper" @onclick="View8">
+
+                    <img class="subtract" src="./images/Registration/Subtract.png">
+
+                </div>
+            </a>
+            <a title="" target="_self">
+                <div class="@class7 view-7" @onclick="View7"></div>
+            </a>
+        </div>
+
+
+
+        <a @onclick="NextPage" title="Далее" target="_self">
+            <div class="view-9">
+                <div class="text-wrapper-13" >Далее</div>
+                <img class="arrow" src="./images/Registration/Arrow3.svg" />
+            </div>
+        </a>
+        <div class="group-wrapper">
+            <a @onclick="PreviousPage" title="Назад" target="_self">
+                <div class="group-2">
+                    <div class="text-wrapper-14" >Назад</div>
+                    <img class="arrow2" src="./images/Registration/Arrow1.svg" />
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+
+@code{
+    bool view2 = false;
+    bool view3 = false;
+    bool view4 = false;
+    bool view5 = false;
+    bool view6 = false;
+    bool view7 = false;
+    bool view8 = false;
+
+    string class2 = "";
+    string class3 = "";
+    string class4 = "";
+    string class5 = "";
+    string class6 = "";
+    string class7 = "";
+    string class8 = "";
+
+    void View2()
+    {
+        view2 = !view2;
+        class2 = (view2) ? "focus" : "";
+    }
+
+    void View3()
+    {
+        view3 = !view3;
+        class3 = (view3) ? "focus" : "";
+    }
+
+    void View4()
+    {
+        view4 = !view4;
+        class4 = (view4) ? "focus" : "";
+    }
+
+    void View5()
+    {
+        view5 = !view5;
+        class5 = (view5) ? "focus" : "";
+    }
+
+    void View6()
+    {
+        view6 = !view6;
+        class6 = (view6) ? "focus" : "";
+    }
+
+    void View7()
+    {
+        view7 = !view7;
+        class7 = (view7) ? "focus" : "";
+    }
+
+    void View8()
+    {
+        view8 = !view8;
+        class8 = (view8) ? "focus" : "";
+    }
+
+    async Task NextPage()
+    {
+        await SessionStorage.SetItemAsync<bool>("view2", view2);
+        await SessionStorage.SetItemAsync<bool>("view3", view3);
+        await SessionStorage.SetItemAsync<bool>("view4", view4);
+        await SessionStorage.SetItemAsync<bool>("view5", view5);
+        await SessionStorage.SetItemAsync<bool>("view6", view6);
+        await SessionStorage.SetItemAsync<bool>("view7", view7);
+        await SessionStorage.SetItemAsync<bool>("view8", view8);
+        _navigationManager.NavigateTo("/reg3");
+    }
+
+    async Task PreviousPage()
+    {
+        await SessionStorage.SetItemAsync<bool>("view2", view2);
+        await SessionStorage.SetItemAsync<bool>("view3", view3);
+        await SessionStorage.SetItemAsync<bool>("view4", view4);
+        await SessionStorage.SetItemAsync<bool>("view5", view5);
+        await SessionStorage.SetItemAsync<bool>("view6", view6);
+        await SessionStorage.SetItemAsync<bool>("view7", view7);
+        await SessionStorage.SetItemAsync<bool>("view8", view8);
+        _navigationManager.NavigateTo("/reg1");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        view2 = await SessionStorage.GetItemAsync<bool>("view2");
+        class2 = (view2) ? "focus" : "";
+        view3 = await SessionStorage.GetItemAsync<bool>("view3");
+        class3 = (view3) ? "focus" : "";
+        view4 = await SessionStorage.GetItemAsync<bool>("view4");
+        class4 = (view4) ? "focus" : "";
+        view5 = await SessionStorage.GetItemAsync<bool>("view5");
+        class5 = (view5) ? "focus" : "";
+        view6 = await SessionStorage.GetItemAsync<bool>("view6");
+        class6 = (view6) ? "focus" : "";
+        view7 = await SessionStorage.GetItemAsync<bool>("view7");
+        class7 = (view7) ? "focus" : "";
+        view8 = await SessionStorage.GetItemAsync<bool>("view8");
+        class8 = (view8) ? "focus" : "";
+    }
+
+}

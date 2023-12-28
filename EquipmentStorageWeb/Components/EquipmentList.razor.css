@@ -1,0 +1,90 @@
+﻿screen {
+    position: relative;
+    width: 240px;
+    height: 369px;
+    background-image: url(./img/image-2.png);
+    background-size: 100% 100%;
+}
+
+.screen .image {
+    position: absolute;
+    width: 199px;
+    height: 200px;
+    top: 52px;
+    left: 18px;
+}
+
+.screen .text-wrapper {
+    position: absolute;
+    top: 19px;
+    left: 174px;
+    font-family: "Open Sans-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #274251;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.screen .div {
+    position: absolute;
+    top: 266px;
+    left: 30px;
+    font-family: "Open Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #274251;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+
+.screen .span {
+    font-family: "Open Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #274251;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+
+.screen .text-wrapper-2 {
+    font-size: 16px;
+}
+
+.screen .text-wrapper-3 {
+    font-family: "Open Sans-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.screen .view {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 22px;
+    left: 26px;
+    background-color: #60d243;
+    border-radius: 9.96px/10px;
+}
+
+.screen .p {
+    position: absolute;
+    top: 334px;
+    left: 71px;
+    font-family: "Open Sans-SemiBold", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+    white-space: nowrap;
+}
+
+.screen .text-wrapper-4 {
+    font-weight: 600;
+}
+
+.screen .text-wrapper-5 {
+    font-family: "Open Sans-Regular", Helvetica;
+}
